@@ -3,23 +3,23 @@ using System.Collections.Generic;
 
 namespace BridgePattern
 {
-    public class Faq : IManuscript
+    public class Faq : Manuscript
     {
         public string Title { get; set; }
         public Dictionary<string, string> Questions { get; set; }
 
-        public Faq()
+        public Faq(IFormatter formatter) : base(formatter)
         {
             Questions = new Dictionary<string, string>();
         }
 
-        public void Print()
+        public override void Print()
         {
-            Console.WriteLine("Title: {0}", Title);
+            Console.WriteLine(Formatter.Format("Title", Title));
             foreach (var question in Questions)
             {
-                Console.WriteLine("     Question: {0}", question.Key);
-                Console.WriteLine("     Answer: {0}", question.Value);
+                Console.WriteLine(Formatter.Format("     Question", question.Key));
+                Console.WriteLine(Formatter.Format("     Answer", question.Value));
             }
             Console.WriteLine();
         }

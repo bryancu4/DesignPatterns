@@ -2,17 +2,21 @@
 
 namespace BridgePattern
 {
-    public class Book : IManuscript
+    public class Book : Manuscript
     {
         public string Title { get; set; }
         public string Author { get; set; }
         public string Text { get; set; }
 
-        public virtual void Print()
+        public Book(IFormatter formatter) : base(formatter)
         {
-            Console.WriteLine("Title: {0}", Title);
-            Console.WriteLine("Author: {0}", Author);
-            Console.WriteLine("Text: {0}", Text);
+        }
+
+        public override void Print()
+        {
+            Console.WriteLine(Formatter.Format("Title", Title));
+            Console.WriteLine(Formatter.Format("Author", Author));
+            Console.WriteLine(Formatter.Format("Text", Text));
             Console.WriteLine();
         }
     }
