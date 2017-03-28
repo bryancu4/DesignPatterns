@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BridgePattern
 {
@@ -12,7 +8,7 @@ namespace BridgePattern
         public string Author { get; set; }
         public string Text { get; set; }
 
-        public void Print()
+        public virtual void Print()
         {
             Console.WriteLine("Title: {0}", Title);
             Console.WriteLine("Author: {0}", Author);
