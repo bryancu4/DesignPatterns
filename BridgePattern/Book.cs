@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BridgePattern
 {
-    public class Book
+    public class Book : IManuscript
     {
         public string Title { get; set; }
         public string Author { get; set; }

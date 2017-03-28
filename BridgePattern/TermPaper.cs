@@ -2,7 +2,7 @@
 
 namespace BridgePattern
 {
-    public class TermPaper
+    public class TermPaper : IManuscript
     {
         public string Class { get; set; }
         public string Student { get; set; }

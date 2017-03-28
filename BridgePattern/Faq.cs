@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace BridgePattern
 {
-    public class Faq
+    public class Faq : IManuscript
     {
         public string Title { get; set; }
         public Dictionary<string, string> Questions { get; set; }
