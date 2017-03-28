@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BuilderPattern.ClubSandwichBuilder" Collapsed="true">
+    <Position X="3.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAQAAABAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>ClubSandwichBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BuilderPattern.MySandwichBuilder" Collapsed="true">
+    <Position X="3.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAQAAABAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>MySandwichBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BuilderPattern.Sandwich" Collapsed="true">
+    <Position X="8.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAQIAAAAAAQBAAAAAAAAAAQAAAAIIAAA=</HashCode>
+      <FileName>Sandwich.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BuilderPattern.SandwichBuilder" Collapsed="true">
+    <Position X="3.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAABAAAAQAAAJAAAAAAAABAAAAEAAAA=</HashCode>
+      <FileName>SandwichBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BuilderPattern.SandwichMaker" Collapsed="true">
+    <Position X="6.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAABAAAAAAAAA=</HashCode>
+      <FileName>SandwichMaker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

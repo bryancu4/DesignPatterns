@@ -2,22 +2,22 @@
 
 namespace BuilderPattern
 {
-    public class MySandwichBuilder : SandwichBuilder
+    public class ClubSandwichBuilder : SandwichBuilder
     {
         public override void AddCondiments()
         {
-            sandwich.HasMayo = false;
+            sandwich.HasMayo = true;
             sandwich.HasMustard = true;
         }
 
         public override void ApplyVegetables()
         {
-            sandwich.Vegetables = new List<string> { "Tomato", "Onion" };
+            sandwich.Vegetables = new List<string> { "Tomato", "Onion", "Lettuce" };
         }
 
         public override void ApplyMeatAndCheese()
         {
-            sandwich.CheeseType = CheeseType.Cheddar;
+            sandwich.CheeseType = CheeseType.Swiss;
             sandwich.MeatType = MeatType.Turkey;
         }
 

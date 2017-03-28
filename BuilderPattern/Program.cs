@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace BuilderPattern
 {
@@ -7,11 +6,15 @@ namespace BuilderPattern
     {
         static void Main(string[] args)
         {
-            var builder = new MySandwichBuilder();
+            var sandwichMaker = new SandwichMaker(new MySandwichBuilder());
+            sandwichMaker.BuildSandwich();
+            var sandwich1 = sandwichMaker.GetSandwich();
+            sandwich1.Display();
 
-            builder.CreateSandwich();
-            var sandwich = builder.GetSandwich();
-            sandwich.Display();
+            var sandwichMaker2 = new SandwichMaker(new ClubSandwichBuilder());
+            sandwichMaker2.BuildSandwich();
+            var sandwich2 = sandwichMaker2.GetSandwich();
+            sandwich2.Display();
 
             Console.ReadKey();
         }
