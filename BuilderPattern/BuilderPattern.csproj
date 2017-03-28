@@ -46,6 +46,7 @@
     <Compile Include="BreadType.cs" />
     <Compile Include="CheeseType.cs" />
     <Compile Include="MeatType.cs" />
+    <Compile Include="MySandwichBuilder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sandwich.cs" />
