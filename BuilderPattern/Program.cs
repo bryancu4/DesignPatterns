@@ -7,7 +7,14 @@ namespace BuilderPattern
     {
         static void Main(string[] args)
         {
-            new Sandwich(BreadType.Wheat, false, CheeseType.American, MeatType.Turkey, false, false, new List<string> { "Tomato" }).Display();
+            var sandwich = new Sandwich();
+            sandwich.BreadType = BreadType.White;
+            sandwich.CheeseType = CheeseType.Cheddar;
+            sandwich.HasMayo = false;
+            sandwich.IsToasted = true;
+            sandwich.HasMustard = true;
+            sandwich.Vegetables = new List<string> { "Tomato", "Onion" };
+            sandwich.Display();
 
             Console.ReadKey();
         }

@@ -5,38 +5,27 @@ namespace BuilderPattern
 {
     public class Sandwich
     {
-        public BreadType breadType { get; set; }
-        public bool isToasted { get; set; }
-        public CheeseType cheeseType { get; set; }
-        public MeatType meatType { get; set; }
-        public bool hasMustard { get; set; }
-        public bool hasMayo { get; set; }
-        public List<string> vegetables { get; set; }
-
-        public Sandwich(BreadType breadType, bool isToasted, CheeseType cheeseType, MeatType meatType, bool hasMustard, bool hasMayo, List<string> vegetables)
-        {
-            this.breadType = breadType;
-            this.isToasted = isToasted;
-            this.cheeseType = cheeseType;
-            this.meatType = meatType;
-            this.hasMustard = hasMustard;
-            this.hasMayo = hasMayo;
-            this.vegetables = vegetables;
-        }
+        public BreadType BreadType { get; set; }
+        public bool IsToasted { get; set; }
+        public CheeseType CheeseType { get; set; }
+        public MeatType MeatType { get; set; }
+        public bool HasMustard { get; set; }
+        public bool HasMayo { get; set; }
+        public List<string> Vegetables { get; set; }
 
         public void Display()
         {
-            Console.WriteLine("Sandwich on {0} bread", breadType);
-            if(isToasted)
+            Console.WriteLine("Sandwich on {0} bread", BreadType);
+            if(IsToasted)
                 Console.WriteLine("Toasted");
-            if(hasMayo)
+            if(HasMayo)
                 Console.WriteLine("With Mayo");
-            if (hasMustard)
+            if (HasMustard)
                 Console.WriteLine("With Mustard");
-            Console.WriteLine("Meat: {0}", meatType);
-            Console.WriteLine("Cheese: {0}", cheeseType);
+            Console.WriteLine("Meat: {0}", MeatType);
+            Console.WriteLine("Cheese: {0}", CheeseType);
             Console.WriteLine("Veggies:");
-            foreach (var vegetable in vegetables)
+            foreach (var vegetable in Vegetables)
                 Console.WriteLine("     {0}", vegetable);
         }
     }
