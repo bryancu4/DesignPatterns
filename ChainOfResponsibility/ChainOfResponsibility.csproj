@@ -45,8 +45,11 @@
   <ItemGroup>
     <Compile Include="ConsoleInput.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="EndOfChainExpenseHandler.cs" />
+    <Compile Include="ExpenseHandler.cs" />
     <Compile Include="ExpenseReport.cs" />
     <Compile Include="IExpenseApprover.cs" />
+    <Compile Include="IExpenseHandler.cs" />
     <Compile Include="IExpenseReport.cs" />
     <Compile Include="ApprovalResponse.cs" />
     <Compile Include="Program.cs" />

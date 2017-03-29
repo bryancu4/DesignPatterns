@@ -10,38 +10,26 @@ namespace ChainOfResponsibility
     {
         static void Main()
         {
-            List<Employee> managers = new List<Employee>
-                                          {
-                                              new Employee("William Worker", Decimal.Zero),
-                                              new Employee("Mary Manager", new Decimal(1000)),
-                                              new Employee("Victor Vicepres", new Decimal(5000)),
-                                              new Employee("Paula President", new Decimal(20000)),
-                                          };
+            ExpenseHandler william = new ExpenseHandler(new Employee("William Worker", Decimal.Zero));
+            ExpenseHandler mary = new ExpenseHandler(new Employee("Mary Manager", new Decimal(1000)));
+            ExpenseHandler victor = new ExpenseHandler(new Employee("Victor Vicepres", new Decimal(5000)));
+            ExpenseHandler paula = new ExpenseHandler(new Employee("Paula President", new Decimal(20000)));
+
+            william.RegisterNext(mary);
+            mary.RegisterNext(victor);
+            victor.RegisterNext(paula);
 
             Decimal expenseReportAmount;
-            while (ConsoleInput.TryReadDecimal("Expense report amount:", out expenseReportAmount))
+            if (ConsoleInput.TryReadDecimal("Expense report amount:", out expenseReportAmount))
             {
                 IExpenseReport expense = new ExpenseReport(expenseReportAmount);
 
-                bool expenseProcessed = false;
+                ApprovalResponse response = william.Approve(expense);
 
-                foreach (Employee approver in managers)
-                {
-                    ApprovalResponse response = approver.ApproveExpense(expense);
-
-                    if (response != ApprovalResponse.BeyondApprovalLimit)
-                    {
-                        Console.WriteLine("The request was {0}.", response);
-                        expenseProcessed = true;
-                        break;
-                    }
-                }
-
-                if (!expenseProcessed)
-                {
-                    Console.WriteLine("No one was able to approve your expense.");
-                }
+                Console.WriteLine("The request was {0}.", response);
             }
+
+            Console.ReadKey();
         }
     }
 }
